@@ -1,0 +1,73 @@
+{
+  "tenant_id": "YOUR_TENANT_ID_HERE",
+  "client_id": "YOUR_CLIENT_ID_HERE",
+  
+  "authentication": {
+    "method": "certificate",
+    "certificate_path": "./certs/defender-agent-cert.pfx",
+    "certificate_password": "YOUR_CERT_PASSWORD",
+    "certificate_thumbprint": "YOUR_CERT_THUMBPRINT",
+    "client_secret": "ONLY_IF_USING_SECRET_AUTH"
+  },
+  
+  "report_directory": "./reports",
+  
+  "analysis_settings": {
+    "signin_hours_back": 24,
+    "defender_days_back": 7,
+    "risk_threshold": "medium",
+    "failed_signin_threshold": 5,
+    "trusted_countries": ["US", "United States"],
+    "trusted_locations": []
+  },
+  
+  "notifications": {
+    "github_integration": false,
+    "github_repo": "owner/repo",
+    "github_token": "GITHUB_PAT_IF_USING",
+    
+    "slack_webhook": null,
+    "slack_channel": "#security-alerts",
+    
+    "teams_webhook": null,
+    
+    "email_enabled": false,
+    "email_recipients": ["security@company.com"],
+    "smtp_server": "smtp.office365.com",
+    "smtp_port": 587,
+    "smtp_user": "alerts@company.com",
+    "smtp_password": "EMAIL_PASSWORD"
+  },
+  
+  "scheduling": {
+    "daily_run_time": "08:00",
+    "weekly_run_day": "Monday",
+    "weekly_run_time": "09:00",
+    "timezone": "UTC"
+  },
+  
+  "features": {
+    "analyze_signins": true,
+    "analyze_defender": true,
+    "analyze_risky_users": true,
+    "analyze_guest_users": true,
+    "check_device_compliance": true,
+    "check_conditional_access": true,
+    "generate_markdown_reports": true,
+    "generate_json_reports": true
+  },
+  
+  "api_settings": {
+    "rate_limit_delay": 1,
+    "max_retries": 3,
+    "timeout": 30,
+    "page_size": 100
+  },
+  
+  "security": {
+    "redact_pii": true,
+    "mask_ip_addresses": false,
+    "data_retention_days": 30,
+    "log_api_calls": true
+  }
+}

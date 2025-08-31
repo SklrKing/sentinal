@@ -1,0 +1,33 @@
+# Microsoft Graph API Authentication
+msal==1.24.1
+msal-extensions==1.0.0
+
+# HTTP Requests and API Communication
+requests==2.31.0
+urllib3==2.0.7
+
+# Certificate Handling
+cryptography==41.0.5
+pyOpenSSL==23.3.0
+
+# Data Processing
+python-dateutil==2.8.2
+
+# Optional: For enhanced reporting
+jinja2==3.1.2  # For HTML report templates
+markdown==3.5.1  # For markdown processing
+
+# Optional: For notifications
+slack-sdk==3.23.0  # For Slack integration
+pymsteams==0.2.2  # For Teams webhooks
+
+# Optional: For scheduling
+schedule==1.2.0  # For cron-like scheduling
+APScheduler==3.10.4  # Advanced scheduling
+
+# Development and Testing
+python-dotenv==1.0.0  # For environment variables
+pytest==7.4.3  # For testing
+pytest-cov==4.1.0  # For test coverage
+black==23.11.0  # For code formatting
+flake8==6.1.0  # For linting
